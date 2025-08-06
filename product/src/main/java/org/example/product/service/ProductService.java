@@ -1,7 +1,9 @@
 package org.example.product.service;
 
 
+import org.example.product.Repository.ProductRepository;
 import org.example.product.model.ProductDto;
+import org.example.product.model.ProductEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
