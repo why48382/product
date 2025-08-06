@@ -12,6 +12,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MovieService {
     private final MovieRepository movieRepository;
+    // 어노테이션으로 생성자 생성
 
     public void save(MovieDto.resister dto) {
         movieRepository.save(dto.toEntity());
