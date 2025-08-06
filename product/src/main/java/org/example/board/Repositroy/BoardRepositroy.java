@@ -1,7 +1,6 @@
-package org.example.product.board.Repositroy;
+package org.example.board.Repositroy;
 
-import org.example.product.board.model.BoardEntity;
-import org.example.product.product.cotroller.model.ProductEntity;
+import org.example.board.model.BoardEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
