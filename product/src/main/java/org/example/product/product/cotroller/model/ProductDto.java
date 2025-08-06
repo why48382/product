@@ -1,4 +1,4 @@
-package org.example.product.model;
+package org.example.product.product.cotroller.model;
 
 public class ProductDto {
     public static class product {

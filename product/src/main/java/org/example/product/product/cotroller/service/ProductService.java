@@ -1,9 +1,9 @@
-package org.example.product.service;
+package org.example.product.product.cotroller.service;
 
 
-import org.example.product.Repository.ProductRepository;
-import org.example.product.model.ProductDto;
-import org.example.product.model.ProductEntity;
+import org.example.product.product.cotroller.Repository.ProductRepository;
+import org.example.product.product.cotroller.model.ProductDto;
+import org.example.product.product.cotroller.model.ProductEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

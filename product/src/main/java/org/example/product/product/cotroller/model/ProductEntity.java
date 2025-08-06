@@ -1,4 +1,4 @@
-package org.example.product.model;
+package org.example.product.product.cotroller.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

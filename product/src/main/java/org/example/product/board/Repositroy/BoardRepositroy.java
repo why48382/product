@@ -1,0 +1,12 @@
+package org.example.product.board.Repositroy;
+
+import org.example.product.board.model.BoardEntity;
+import org.example.product.product.cotroller.model.ProductEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface BoardRepositroy extends JpaRepository <BoardEntity, Integer>{
+List<BoardEntity> findByTitle(String title);
+
+}
