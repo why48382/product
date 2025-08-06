@@ -3,10 +3,10 @@ spring:
     name: demo
 
   datasource:
-    url: ${DB_URL}  # jdbc:mariadb://10.10.10.100:3306/test
+    url: ${DB_URL}
     driver-class-name: org.mariadb.jdbc.Driver
-    username: ${DB_USERNAME} # sjb
-    password: ${DB_PASSWORD} # qwer1234
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   jpa:
     database-platform: org.hibernate.dialect.MariaDBDialect
