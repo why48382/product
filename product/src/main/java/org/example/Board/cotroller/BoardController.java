@@ -1,7 +1,9 @@
-package org.example.Board.cotroller;
+package org.example.board.cotroller;
 
-import org.example.Board.model.BoardDto;
-import org.example.Board.service.BoardService;
+import org.example.board.model.BoardDto;
+
+
+import org.example.board.service.BoardService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,19 +20,19 @@ public class BoardController {
 
     @PostMapping("/save")
     public ResponseEntity boardSave(@RequestBody BoardDto.Register dto) {
-        boardService.register(dto);
+        boardService.save(dto);
         return ResponseEntity.status(200).body("저장 성공");
     }
 
     @GetMapping("/read")
     public ResponseEntity boardRead(Integer idx) {
-        BoardDto.board result = boardService.read(idx);
+        BoardDto.Board result = boardService.read(idx);
         return ResponseEntity.status(200).body(result);
     }
 
     @GetMapping("/list")
     public ResponseEntity BoardList() {
-        List<BoardDto.board> list = boardService.list();
+        List<BoardDto.Board> list = boardService.list();
         return ResponseEntity.status(200).body(list);
     }
 }

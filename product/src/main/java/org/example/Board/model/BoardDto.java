@@ -1,13 +1,16 @@
-package org.example.Board.model;
+package org.example.board.model;
+
+
+import org.example.board.model.BoardEntity;
 
 public class BoardDto {
-    public static class board {
+    public static class Board {
         private Integer idx;
         private String title;
         private String content;
 
-        public static BoardDto.board from(BoardEntity entity) {
-            Boarddto.board dto = new BoardDto.board();
+        public static BoardDto.Board from(BoardEntity entity) {
+            BoardDto.Board dto = new BoardDto.Board();
             dto.setTitle(entity.getTitle());
             dto.setContent(entity.getContent());
 

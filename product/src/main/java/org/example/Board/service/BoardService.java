@@ -1,9 +1,9 @@
-package org.example.Board.service;
+package org.example.board.service;
 
 
-import org.example.Board.Repository.BoardRepository;
-import org.example.product.Product.model.ProductDto;
-import org.example.product.Product.model.ProductEntity;
+import org.example.board.Repository.BoardRepository;
+import org.example.board.model.BoardDto;
+import org.example.board.model.BoardEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,37 +11,28 @@ import java.util.Optional;
 
 @Service
 public class BoardService {
-    private final BoardRepository productRepository;
-
-    public BoardService(BoardRepository productRepository) {
-        this.productRepository = productRepository;
+    private final BoardRepository boardRepository;
+    public BoardService(BoardRepository boardRepository) {
+        this.boardRepository = boardRepository;
     }
 
-    public void register(ProductDto.Register dto) {
-        productRepository.save(dto.toEntity());
+    public void save(BoardDto.Register dto) {
+        boardRepository.save(dto.toEntity());
     }
 
-    public List<ProductDto.product> list() {
-        List<ProductEntity> result = productRepository.findAll();
-
-        return result.stream().map(ProductDto.product::from).toList();
+    public List<BoardDto.Board> list() {
+        List<BoardEntity> result = boardRepository.findAll();
+        return result.stream().map(BoardDto.Board::from).toList();
     }
 
-    public ProductDto.product read(Integer idx) {
-        Optional<ProductEntity> result = productRepository.findById(idx);
+    public BoardDto.Board read(Integer idx) {
+        Optional<BoardEntity> result = boardRepository.findById(idx);
 
         if (result.isPresent()) {
-            ProductEntity entity = result.get();
+            BoardEntity entity = result.get();
 
-            return ProductDto.product.from(entity);
+            return BoardDto.Board.from(entity);
         }
-
         return null;
-    }
-
-    public List<ProductDto.product> search(String name) {
-        List<ProductEntity> result = productRepository.findByName(name);
-
-        return result.stream().map(ProductDto.product::from).toList();
     }
 }
