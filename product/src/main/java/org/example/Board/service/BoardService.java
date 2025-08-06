@@ -1,7 +1,7 @@
-package org.example.product.Board.service;
+package org.example.Board.service;
 
 
-import org.example.product.Board.Repository.BoardRepository;
+import org.example.Board.Repository.BoardRepository;
 import org.example.product.Product.model.ProductDto;
 import org.example.product.Product.model.ProductEntity;
 import org.springframework.stereotype.Service;

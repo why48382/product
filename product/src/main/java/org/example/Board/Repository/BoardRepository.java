@@ -1,4 +1,4 @@
-package org.example.product.Board.Repository;
+package org.example.Board.Repository;
 
 import org.example.product.Product.model.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

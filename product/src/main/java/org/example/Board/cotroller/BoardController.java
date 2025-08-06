@@ -1,7 +1,7 @@
-package org.example.product.Board.cotroller;
+package org.example.Board.cotroller;
 
-import org.example.product.Board.model.BoardDto;
-import org.example.product.Board.service.BoardService;
+import org.example.Board.model.BoardDto;
+import org.example.Board.service.BoardService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

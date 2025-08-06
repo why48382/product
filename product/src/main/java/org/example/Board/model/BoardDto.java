@@ -1,4 +1,4 @@
-package org.example.product.Board.model;
+package org.example.Board.model;
 
 public class BoardDto {
     public static class board {
