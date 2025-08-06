@@ -1,4 +1,4 @@
-package org.example.product.model;
+package org.example.product.Product.model;
 
 public class ProductDto {
     public static class product {
@@ -9,7 +9,7 @@ public class ProductDto {
 
         public static ProductDto.product from(ProductEntity entity) {
             ProductDto.product dto = new ProductDto.product();
-            dto.setIdx(entity.getIdx);
+            dto.setIdx(entity.getIdx());
             dto.setDetail(entity.getDetail());
             dto.setName(entity.getName());
             dto.setPrice(entity.getPrice());
@@ -53,6 +53,31 @@ public class ProductDto {
     public static class Register {
         private String detail;
         private String name;
+
+        public String getDetail() {
+            return detail;
+        }
+
+        public void setDetail(String detail) {
+            this.detail = detail;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Integer getPrice() {
+            return price;
+        }
+
+        public void setPrice(Integer price) {
+            this.price = price;
+        }
+
         private Integer price;
 
 

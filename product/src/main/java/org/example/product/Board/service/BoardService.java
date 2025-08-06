@@ -1,17 +1,19 @@
-package org.example.product.service;
+package org.example.product.Board.service;
 
 
-import org.example.product.model.ProductDto;
+import org.example.product.Board.Repository.BoardRepository;
+import org.example.product.Product.model.ProductDto;
+import org.example.product.Product.model.ProductEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductService {
-    private final ProductRepository productRepository;
+public class BoardService {
+    private final BoardRepository productRepository;
 
-    public ProductService(ProductRepository productRepository) {
+    public BoardService(BoardRepository productRepository) {
         this.productRepository = productRepository;
     }
 

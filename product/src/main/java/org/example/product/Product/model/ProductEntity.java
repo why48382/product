@@ -1,4 +1,4 @@
-package org.example.product.model;
+package org.example.product.Product.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,9 +9,18 @@ import jakarta.persistence.Id;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idx;
     private String name;
-    private String description;
+    private String detail;
     private Integer price;
+
+    public Integer getIdx() {
+        return idx;
+    }
+
+    public void setIdx(Integer idx) {
+        this.idx = idx;
+    }
 
     public String getName() {
         return name;
@@ -21,12 +30,12 @@ public class ProductEntity {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
     public Integer getPrice() {

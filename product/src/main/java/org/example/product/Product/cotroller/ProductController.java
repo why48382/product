@@ -1,7 +1,7 @@
-package org.example.product.cotroller;
+package org.example.product.Product.cotroller;
 
-import org.example.product.model.ProductDto;
-import org.example.product.service.ProductService;
+import org.example.product.Product.model.ProductDto;
+import org.example.product.Product.service.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
